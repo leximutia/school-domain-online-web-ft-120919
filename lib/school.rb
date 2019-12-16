@@ -1,37 +1,37 @@
-class School 
-  
+class School
+
   def initialize(name)
     @name = name
     @roster = {}
   end
-  
-  
-  def roster 
+
+
+  def roster
     @roster
   end
-  
-  
-  def add_student(name, grade) 
+
+
+  def add_student(name, grade)
     @roster[grade] = [] unless @roster.include?(grade)
     @roster[grade] << name
-  end 
-  
-  
+  end
+
+
   def grade(grade)
     @roster[grade]
-  end 
-  
-  
+  end
+
+
   def sort
-    
+
     sorted_roster = {}
-    
+
     @roster.collect do |grade, student_array|
       sorted_roster[grade] = student_array.sort
-    end 
-    
+    end
+
     sorted_roster
-    
-  end 
-  
+
+  end
+
 end 
